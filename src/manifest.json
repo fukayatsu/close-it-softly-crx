@@ -1,0 +1,29 @@
+{
+   "manifest_version": 2,
+   "name": "そっ閉じ",
+   "version": "0.0.1",
+   "permissions": [
+      "webNavigation",
+      "tabs"
+   ],
+   "background": {
+      "scripts": [
+         "js/background.js"
+      ]
+   },
+   "content_scripts": [{
+      "matches": ["http://www.nicovideo.jp/watch/*"],
+      "js": [
+         "js/jquery-1.9.1.min.js",
+         "js/content_script.js"
+      ]
+   }],
+   "browser_action": {
+      "default_icon": "img/icon128.png",
+      "default_title": "そっ閉じ"
+   },
+   "icons": {
+      "128": "img/icon128.png",
+      "48": "img/icon48.png"
+   }
+}
